@@ -191,17 +191,21 @@ export default class VirtualList extends PureComponent {
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   };
 
-  sizeAndPositionManager = new SizeAndPositionManager({
-    itemCount: this.props.itemCount,
-    itemSizeGetter: this.itemSizeGetter(this.props.itemSize),
-    estimatedItemSize: this.getEstimatedItemSize(),
-  });
+  constructor(props) {
+    super(props);
 
-  state = {
-    offset: this.props.scrollOffset || (this.props.scrollToIndex != null && this.getOffsetForIndex(this.props.scrollToIndex)) || 0,
-  };
+    this.sizeAndPositionManager = new SizeAndPositionManager({
+      itemCount: props.itemCount,
+      itemSizeGetter: this.itemSizeGetter(props.itemSize),
+      estimatedItemSize: this.getEstimatedItemSize(props),
+    });
 
-  styleCache = {};
+    this.state = {
+      offset: props.scrollOffset || (props.scrollToIndex != null && this.getOffsetForIndex(props.scrollToIndex)) || 0,
+    };
+
+    this.styleCache = {};
+  }
 
   getRef = node => {
     this.rootNode = node;
