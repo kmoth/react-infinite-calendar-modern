@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   blank: 'Select a date...',
   headerFormat: 'ddd, MMM Do',
   todayLabel: {

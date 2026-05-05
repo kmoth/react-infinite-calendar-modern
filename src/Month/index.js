@@ -4,7 +4,7 @@ import {getDateString} from '../utils';
 import format from 'date-fns/format';
 import getDay from 'date-fns/get_day';
 import isSameYear from 'date-fns/is_same_year';
-import styles from './Month.scss';
+import styles from './Month.module.scss';
 
 export default class Month extends PureComponent {
   renderRows() {

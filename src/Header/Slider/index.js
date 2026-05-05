@@ -1,8 +1,8 @@
 import React, {Children, PureComponent} from 'react';
-import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import CSSTransitionGroup from '../../utils/TransitionGroup';
 import classNames from 'classnames';
-import styles from './Slider.scss';
-import transition from './transition.scss';
+import styles from './Slider.module.scss';
+import transition from './transition.module.scss';
 
 const DIRECTIONS = {
   LEFT: 0,

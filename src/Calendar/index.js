@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {debounce, emptyFn, range, ScrollSpeed} from '../utils';
-import {defaultProps} from 'recompose';
+import {defaultProps} from '../utils/hocs';
 import defaultDisplayOptions from '../utils/defaultDisplayOptions';
 import defaultLocale from '../utils/defaultLocale';
 import defaultTheme from '../utils/defaultTheme';
@@ -12,13 +12,15 @@ import MonthList from '../MonthList';
 import Weekdays from '../Weekdays';
 import Years from '../Years';
 import Day from '../Day';
+import container from './Container.module.scss';
+import day from '../Day/Day.module.scss';
 import parse from 'date-fns/parse';
 import format from 'date-fns/format';
 import startOfDay from 'date-fns/start_of_day';
 
 const styles = {
-  container: require('./Container.scss'),
-  day: require('../Day/Day.scss'),
+  container,
+  day,
 };
 
 export const withDefaultProps = defaultProps({
@@ -119,7 +121,7 @@ export default class Calendar extends Component {
       this.node.focus();
     }
   }
-  componentWillUpdate(nextProps, nextState) {
+  UNSAFE_componentWillUpdate(nextProps, nextState) {
     let {min, minDate, max, maxDate} = this.props;
 
     if (nextProps.min !== min || nextProps.minDate !== minDate || nextProps.max !== max || nextProps.maxDate !== maxDate) {

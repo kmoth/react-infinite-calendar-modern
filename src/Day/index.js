@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import classNames from 'classnames';
 import parse from 'date-fns/parse';
-import styles from './Day.scss';
+import styles from './Day.module.scss';
 
 export default class Day extends PureComponent {
   handleClick = () => {

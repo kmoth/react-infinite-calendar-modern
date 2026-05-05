@@ -3,7 +3,7 @@ import {
   withHandlers,
   withProps,
   withState,
-} from 'recompose';
+} from '../utils/hocs';
 import addDays from 'date-fns/add_days';
 import format from 'date-fns/format';
 import isAfter from 'date-fns/is_after';

@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import styles from './Today.scss';
+import styles from './Today.module.scss';
 
 export const DIRECTION_UP = 1;
 export const DIRECTION_DOWN = -1;

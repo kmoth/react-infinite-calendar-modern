@@ -1,10 +1,10 @@
 import React from 'react';
-import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import CSSTransitionGroup from '../utils/TransitionGroup';
 import classNames from 'classnames';
 import parse from 'date-fns/parse';
 import format from 'date-fns/format';
-import styles from './Header.scss';
-import animation from './Animation.scss';
+import styles from './Header.module.scss';
+import animation from './Animation.module.scss';
 
 export default function defaultSelectionRenderer(value, {
   display,

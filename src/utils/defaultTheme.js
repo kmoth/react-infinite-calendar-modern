@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   accentColor: '#448AFF',
   floatingNav: {
     background: 'rgba(56, 87, 138, 0.94)',

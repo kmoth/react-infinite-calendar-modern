@@ -1,4 +1,4 @@
-import {compose, withProps, withPropsOnChange, withState} from 'recompose';
+import {compose, withProps, withPropsOnChange, withState} from '../utils/hocs';
 import {withDefaultProps} from './';
 import {sanitizeDate, withImmutableProps} from '../utils';
 import enhanceHeader from '../Header/withMultipleDates';

@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import VirtualList from 'react-tiny-virtual-list';
+import VirtualList from '../VirtualList';
 import classNames from 'classnames';
 import {emptyFn, getMonthsForYear} from '../utils';
 import format from 'date-fns/format';
 import isAfter from 'date-fns/is_after';
 import isBefore from 'date-fns/is_before';
 import isSameMonth from 'date-fns/is_same_month';
-import styles from './Years.scss';
+import styles from './Years.module.scss';
 
 const SPACING = 40;
 
@@ -119,7 +119,6 @@ export default class Years extends Component {
         style={{color: theme.selectionColor, height: height + 50}}
       >
         <VirtualList
-          ref="List"
           className={styles.list}
           width={width}
           height={containerHeight}

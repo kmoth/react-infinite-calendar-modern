@@ -3,7 +3,7 @@ import {
   withProps,
   withPropsOnChange,
   withState,
-} from 'recompose';
+} from '../utils/hocs';
 import {withDefaultProps} from './';
 import {sanitizeDate, withImmutableProps} from '../utils';
 import format from 'date-fns/format';

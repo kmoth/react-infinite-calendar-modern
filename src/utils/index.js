@@ -6,7 +6,7 @@ import isBefore from 'date-fns/is_before';
 import isSameDay from 'date-fns/is_same_day';
 import endOfDay from 'date-fns/end_of_day';
 import startOfDay from 'date-fns/start_of_day';
-import {withPropsOnChange} from 'recompose';
+import {withPropsOnChange} from './hocs';
 
 export const keyCodes = {
   command: 91,

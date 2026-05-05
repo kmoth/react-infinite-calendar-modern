@@ -22,7 +22,7 @@ export default class DefaultCalendar extends Component {
       ? this.props.selected
       : new Date(),
   };
-  componentWillReceiveProps({selected}) {
+  UNSAFE_componentWillReceiveProps({selected}) {
     if (selected !== this.props.selected) {
       this.setState({selected});
     }

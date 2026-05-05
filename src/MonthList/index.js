@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import VirtualList from 'react-tiny-virtual-list';
+import VirtualList from '../VirtualList';
 import classNames from 'classnames';
 import {
   emptyFn,
@@ -12,7 +12,7 @@ import {
 import parse from 'date-fns/parse';
 import startOfMonth from 'date-fns/start_of_month';
 import Month from '../Month';
-import styles from './MonthList.scss';
+import styles from './MonthList.module.scss';
 
 const AVERAGE_ROWS_PER_MONTH = 5;
 
@@ -70,7 +70,7 @@ export default class MonthList extends Component {
     this.scrollEl = this.VirtualList.rootNode;
   }
 
-  componentWillReceiveProps({scrollDate}) {
+  UNSAFE_componentWillReceiveProps({scrollDate}) {
     if (scrollDate !== this.props.scrollDate) {
       this.setState({
         scrollTop: this.getDateOffset(scrollDate),

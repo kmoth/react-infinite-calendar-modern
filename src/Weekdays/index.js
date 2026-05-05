@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {scrollbarSize} from '../utils';
-import styles from './Weekdays.scss';
+import styles from './Weekdays.module.scss';
 
 export default class Weekdays extends PureComponent {
   static propTypes = {

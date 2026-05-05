@@ -1,7 +1,7 @@
 import React from 'react';
 import {withImmutableProps} from '../utils';
 import defaultSelectionRenderer from './defaultSelectionRenderer';
-import styles from './Header.scss';
+import styles from './Header.module.scss';
 
 export default withImmutableProps(({renderSelection}) => ({
   renderSelection: (values, props) => {

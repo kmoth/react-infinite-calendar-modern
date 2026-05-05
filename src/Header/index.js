@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {emptyFn} from '../utils';
 import defaultSelectionRenderer from './defaultSelectionRenderer';
 import classNames from 'classnames';
-import styles from './Header.scss';
+import styles from './Header.module.scss';
 
 export default class Header extends PureComponent {
   static defaultProps = {
